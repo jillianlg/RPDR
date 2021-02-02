@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Queen = ({ name, image_url, quote }) => (
+const Queen = ({ name, image_url, seasons:[season], quote }) => (
+
   <figure>
     <figcaption>{name}</figcaption>
-    {/* <p>{season.id}</p> */}
+    <p>{season.id}</p>
     <p>{quote}</p>
     <img src={image_url} />
   </figure>
@@ -12,8 +13,8 @@ const Queen = ({ name, image_url, quote }) => (
 
 Queen.propTypes = {
   name: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  // season.id: PropTypes.string.isRequired,
+  quote: PropTypes.string.isRequired,
+  seasons: PropTypes.array.isRequired,
   image_url: PropTypes.string.isRequired,
 
 };
