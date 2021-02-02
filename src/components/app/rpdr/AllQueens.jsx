@@ -14,7 +14,6 @@ export default class AllQueens extends Component {
 
   render() {
     const { queens } = this.state;
-
     return (
       <ul>
         {queens.map(queen => (

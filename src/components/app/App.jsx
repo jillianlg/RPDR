@@ -1,10 +1,10 @@
 import React from 'react';
-import Queen from './rpdr/Queen';
+import AllQueens from './rpdr/AllQueens';
 
 export default function App() {
   return (
     <>
-      <Queen />
+      <AllQueens />
     </>
   );
 }
