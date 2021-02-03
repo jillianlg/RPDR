@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AllQueens from '../app/rpdr/AllQueens';
+import AllQueens from '../container/queens/AllQueens';
 
 export default class HomePage extends Component {
   render() {

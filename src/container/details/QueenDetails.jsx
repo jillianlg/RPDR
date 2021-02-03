@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import getOneQueen from '../../services/dragRaceApi';
 
 const Queen = ({ name, image_url, seasons:[season], quote }) => (
   <figure>

@@ -5,8 +5,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import Header from '../Header/Header';
-import HomePage from '../Home/HomePage';
-import AllQueens from './rpdr/AllQueens';
+import HomePage from '../../pages/HomePage';
 
 export default function App() {
   return (

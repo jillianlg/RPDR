@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getQueens } from '../services/dragRaceApi';
+import { getQueens } from '../../services/dragRaceApi';
 import QueenList from './QueenList';
 
 export default class AllQueens extends Component {
