@@ -19,11 +19,6 @@ export default function App() {
             exact
             render={(routerProps) => <HomePage {...routerProps} />}
           />
-          {/* <Route
-            path="/list"
-            exact
-            render={(routerProps) => <ListPage {...routerProps} />}
-          /> */}
           <Route
             path="/QueenDetails/:id" 
             exact
