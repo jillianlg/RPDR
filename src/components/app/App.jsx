@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from '../Header/Header';
 import HomePage from '../../pages/HomePage';
+import QueenDetails from '../../container/details/QueenDetails';
 
 export default function App() {
   return (
@@ -18,15 +19,15 @@ export default function App() {
             exact
             render={(routerProps) => <HomePage {...routerProps} />}
           />
-          <Route
+          {/* <Route
             path="/list"
             exact
             render={(routerProps) => <ListPage {...routerProps} />}
-          />
+          /> */}
           <Route
-            path="/details" //should be something like "/pokeData/:pokeName"
+            path="/QueenDetails/:id" 
             exact
-            render={(routerProps) => <DetailsPage {...routerProps} />}
+            render={(routerProps) => <QueenDetails {...routerProps} />}
           />
         </Switch>
       </Router>

@@ -1,21 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import getOneQueen from '../../services/dragRaceApi';
+/* eslint-disable react/prop-types */
 
-const Queen = ({ name, image_url, seasons:[season], quote }) => (
-  <figure>
-    <figcaption>{name}</figcaption>
-    <p>{season.id}</p>
-    <p>{quote}</p>
-    <img src={image_url} />
-  </figure>
-);
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { getOneQueen } from '../../services/dragRaceApi';
+import Queen from '../list/Queen';
 
-Queen.propTypes = {
-  name: PropTypes.string.isRequired,
-  quote: PropTypes.string.isRequired,
-  seasons: PropTypes.array.isRequired,
-  image_url: PropTypes.string.isRequired,
-};
-
-export default Queen;
+export default class QueenDetails extends Component {
+  state= {
+    queenData: {}
+  }
+  
+  componentDidMount() {
+    getOneQueen(this.props.match.params.id)
+      .then(queenData => this.setState({ queenData }));
+  }
+  
+  render() {
+    const { queenData } = this.state;
+    console.log(queenData);
+    return (
+      <>
+        <Link to="/">Home</Link>   
+        <Queen {...queenData} /> 
+      </>
+    );
+  }
+}
