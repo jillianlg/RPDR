@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Queen.css';
 import PropTypes from 'prop-types';
 import Queen from './Queen';
 
@@ -10,7 +11,7 @@ const QueenList = ({ queens }) => {
   ));
 
   return (
-    <ul>
+    <ul className={styles.Queen}>
       {queenElements}
     </ul>
   );
