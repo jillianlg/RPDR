@@ -17,7 +17,7 @@ export default class QueenDetails extends Component {
   
   render() {
     const { queenData } = this.state;
-    console.log(queenData);
+
     return (
       <>
         <Link to="/">Home</Link>   
